@@ -6,7 +6,7 @@ import os
 print("Key loaded:", bool(os.getenv("MISTRAL_API_KEY")))
 
 
-client = Mistral(api_key="ZU5MNEzzWUPz8hgbM7WLq7zNcDIxtcQs")
+client = Mistral(api_key=os.getenv("MISTRAL_API_KEY"))
 messages = [{"role": "system", "content": "AI/ML coach. Use CoT for reasoning."}]
 
 while True:
